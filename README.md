@@ -1,6 +1,6 @@
 # Dev_Mobile
 To do list app TP
 
-#Creators
+# Creators
 Adelin Casez
 Joan Glendinning
