@@ -2,5 +2,5 @@
 To do list app TP
 
 # Creators
-Adelin Casez
+Adelin Casez, 
 Joan Glendinning
