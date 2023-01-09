@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 
 import com.example.todoapp.Adapter.ToDoAdapter;
@@ -48,5 +50,35 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        quit();
+    }
+
+    private void quit() {
+        new AlertDialog.Builder(this)
+                .setMessage(getString(R.string.fichier_messExport))
+                .setTitle("Attention !")
+                .setPositiveButton("Quitter", new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        System.exit(0);
+                        dialog.dismiss();
+
+                    }
+
+                })
+                .setNegativeButton("Annuler", new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        dialog.dismiss();
+
+                    }
+                })
+                .show();
     }
 }
