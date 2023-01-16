@@ -67,24 +67,26 @@ public class RecyclerItemTouchHelper extends ItemTouchHelper.SimpleCallback {
             icon = ContextCompat.getDrawable(adapter.getContext(),R.drawable.ic_baseline_delete);
             background = new ColorDrawable(Color.RED);
         }
-        int iconMargin = (itemView.getHeight()- icon.getIntrinsicHeight()) / 2;
-        int iconTop = itemView.getTop()+ (itemView.getHeight() - icon.getIntrinsicHeight()/2);
+        assert icon != null;
+        int iconMarginTop = (itemView.getHeight() - icon.getIntrinsicHeight()) / 2;
+        int iconMarginLeft = (itemView.getWidth() - icon.getIntrinsicWidth()) / 2;
+        int iconTop = itemView.getTop() + iconMarginTop;
         int iconBottom = iconTop + icon.getIntrinsicHeight();
 
         if(dX>0) {//right swipe
-            int iconLeft = itemView.getLeft() + iconMargin;
-            int iconRight = itemView.getLeft() + iconMargin + icon.getIntrinsicWidth();
+            int iconLeft = itemView.getLeft() + iconMarginLeft;
+            int iconRight = iconLeft + icon.getIntrinsicWidth();
             icon.setBounds(iconLeft, iconTop, iconRight, iconBottom);
 
             background.setBounds(itemView.getLeft(),itemView.getTop(),
                     itemView.getLeft() + ((int) dX) + backgroundCornerOffset, itemView.getBottom());
         }else if(dX<0){ //left swipe
-            int iconLeft = itemView.getRight() - iconMargin - icon.getIntrinsicWidth();
-            int iconRight = itemView.getRight() - iconMargin ;
+            int iconLeft = itemView.getRight() - iconMarginLeft - icon.getIntrinsicWidth();
+            int iconRight = itemView.getRight() - iconMarginLeft;
             icon.setBounds(iconLeft, iconTop, iconRight, iconBottom);
 
-            background.setBounds(itemView.getRight() + ((int) dX) - backgroundCornerOffset,itemView.getTop(),
-                    itemView.getRight(), itemView.getBottom());
+            background.setBounds(itemView.getRight() + ((int) dX) - backgroundCornerOffset,
+                    itemView.getTop(), itemView.getRight(), itemView.getBottom());
         }
         else{
             background.setBounds(0,0,0,0);
