@@ -20,8 +20,8 @@
         android:text="Save"
         android:textAllCaps="false"
         android:background="@android:color/transparent"
-        android:textColor="@android:color/darker_gray">
-
+        android:textColor="@android:color/darker_gray"
+        android:enabled="false">
     </Button>
 
 
