@@ -2,7 +2,9 @@ package com.example.todoapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -49,6 +51,9 @@ public class ActivityNote extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(context, MainActivity.class);
                 startActivity(intent);
+                if (!getSaved()) {
+                    showWarning();
+                }
             }
         });
 
@@ -128,5 +133,27 @@ public class ActivityNote extends AppCompatActivity {
             save.setText("Saving...");
             save.setTextColor(Color.DKGRAY);
         }
+    }
+
+    public void showWarning() {
+        new AlertDialog.Builder(this)
+                .setMessage("Vos notes n'ont pas encore été sauvegarder.")
+                .setTitle("Attention !")
+                .setPositiveButton("Quitter", new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        System.exit(0);
+                        dialog.dismiss();
+
+                    }
+                })
+                .setNegativeButton("Annuler", new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                })
+                .show();
     }
 }
