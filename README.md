@@ -24,14 +24,16 @@ Liste des fonctionnalités implémentées :
 [ ] L'application de pattern (Reactive programming, singleton, MVC,...) Liste :  
 
 # Screenshots
-Splash screen : 
-![LandingPage](https://user-images.githubusercontent.com/41628418/213702811-08c1421a-29cc-4689-b96d-86cd0de6ec2f.jpg)
-<img src="[https://image-url.type](https://user-images.githubusercontent.com/41628418/213702811-08c1421a-29cc-4689-b96d-86cd0de6ec2f.jpg)" width="200" height="200"/>
+ Splash screen : 
  
-Home screen with animation when box is checked : 
-![Confetti](https://user-images.githubusercontent.com/41628418/213703388-f426f9ce-2db7-45d4-96ad-46d2d0d9e42c.jpg)
+<img src="https://user-images.githubusercontent.com/41628418/213702811-08c1421a-29cc-4689-b96d-86cd0de6ec2f.jpg" width="300" height="550"/>
+ 
+ Home screen with animation when box is checked : 
+ 
+<img src="https://user-images.githubusercontent.com/41628418/213703388-f426f9ce-2db7-45d4-96ad-46d2d0d9e42c.jpg" width="300" height="550"/>
 
-Notes screen : 
-![Notes](https://user-images.githubusercontent.com/41628418/213703502-f8176e5f-eae2-4309-b511-be7b38a750c0.jpg)
+ Notes screen : 
+  
+<img src="https://user-images.githubusercontent.com/41628418/213703502-f8176e5f-eae2-4309-b511-be7b38a750c0.jpg" width="300" height="550"/>
 
 
