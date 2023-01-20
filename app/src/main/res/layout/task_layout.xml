@@ -8,7 +8,6 @@
     android:layout_marginHorizontal="16dp"
     android:layout_marginVertical="8dp">
 
-
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -21,6 +20,9 @@
             tool:text="example task"
             android:paddingStart="8dp"
             android:buttonTint="@android:color/holo_green_dark"/>
+
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>
+
+

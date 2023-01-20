@@ -28,7 +28,28 @@
             android:nestedScrollingEnabled="true"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
+<!--         make the animation take the whole screen-->
+
+<!--            android:id="@+id/animationView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            app:lottie_rawRes="@raw/animation"-->
+<!--            app:lottie_autoPlay="true"-->
+<!--            app:lottie_loop="true"/>-->
+
     </LinearLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleX="3"
+        android:scaleY="3"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="false"
+        android:visibility="invisible"
+        app:lottie_rawRes="@raw/animation" />
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/editBtn"

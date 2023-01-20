@@ -11,6 +11,7 @@ import android.widget.CompoundButton;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.example.todoapp.AddNewTask;
 import com.example.todoapp.MainActivity;
 import com.example.todoapp.Model.ToDoModel;
@@ -46,6 +47,10 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.ViewHolder>{
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
                 if(isChecked){
                     db.updateStatus(item.getId(),1);
+                    //set to visible
+                    LottieAnimationView animationView = activity.findViewById(R.id.animationView);
+                    animationView.setVisibility(View.VISIBLE);
+                    animationView.playAnimation();
                 }else{
                     db.updateStatus(item.getId(),0);
                 }
@@ -88,7 +93,6 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.ViewHolder>{
     }
     public static class ViewHolder extends RecyclerView.ViewHolder{
         CheckBox task;
-
         ViewHolder(View view){
             super(view);
             task = view.findViewById(R.id.todoCheckBox);
