@@ -8,7 +8,7 @@ Joan Glendinning
 
 Liste des fonctionnalités implémentées :  
 [ ] Utilisation de l'Api Preference  
-[ ] Ecriture/lecture dans un Fichier   
+[x] Ecriture/lecture dans un Fichier   
 [x] Utilisation de SQLite  
 [ ] Utilisation de Room  
 [ ] Utilisation de Firebase  

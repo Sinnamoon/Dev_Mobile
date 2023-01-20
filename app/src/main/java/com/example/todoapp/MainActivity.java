@@ -6,7 +6,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -19,11 +21,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements DialogCloseListener{
+public class MainActivity extends AppCompatActivity implements DialogCloseListener {
 
+    private Context context;
     private RecyclerView tasksRecyclerView;
     private ToDoAdapter tasksAdapter;
     private FloatingActionButton fab;
+    private FloatingActionButton noteBtn;
 
     private List<ToDoModel> taskList;
     private DatabaseHandler db;
@@ -33,6 +37,8 @@ public class MainActivity extends AppCompatActivity implements DialogCloseListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
+
+        context = this;
 
         db = new DatabaseHandler(this);
         db.openDatabase();
@@ -45,6 +51,7 @@ public class MainActivity extends AppCompatActivity implements DialogCloseListen
         tasksRecyclerView.setAdapter(tasksAdapter);
 
         fab = findViewById(R.id.fab);
+        noteBtn = findViewById(R.id.editBtn);
 
         ItemTouchHelper itemTouchHelper = new ItemTouchHelper(new RecyclerItemTouchHelper(tasksAdapter));
         itemTouchHelper.attachToRecyclerView(tasksRecyclerView);
@@ -60,21 +67,16 @@ public class MainActivity extends AppCompatActivity implements DialogCloseListen
                 AddNewTask.newInstance().show(getSupportFragmentManager(),AddNewTask.TAG);
             }
         });
+
+        noteBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, ActivityNote.class);
+                startActivity(intent);
+            }
+        });
+
     }
-
-  //        ToDoModel task = new ToDoModel();
-//        task.setTask("This is a Test Task");
-//        task.setStatus(0);
-//        task.setId(1);
-//
-//        taskList.add(task);
-//        taskList.add(task);
-//        taskList.add(task);
-//        taskList.add(task);
-//        taskList.add(task);
-//
-//        tasksAdapter.setTasks(taskList);
-
 
     @Override
     public void handleDialogClose(DialogInterface dialog) {
