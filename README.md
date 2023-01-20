@@ -26,6 +26,7 @@ Liste des fonctionnalités implémentées :
 # Screenshots
 Splash screen : 
 ![LandingPage](https://user-images.githubusercontent.com/41628418/213702811-08c1421a-29cc-4689-b96d-86cd0de6ec2f.jpg)
+<img src="[https://image-url.type](https://user-images.githubusercontent.com/41628418/213702811-08c1421a-29cc-4689-b96d-86cd0de6ec2f.jpg)" width="200" height="200"/>
  
 Home screen with animation when box is checked : 
 ![Confetti](https://user-images.githubusercontent.com/41628418/213703388-f426f9ce-2db7-45d4-96ad-46d2d0d9e42c.jpg)
