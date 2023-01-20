@@ -41,13 +41,15 @@
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animationView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
         android:scaleX="3"
         android:scaleY="3"
+        android:visibility="invisible"
         app:lottie_autoPlay="true"
         app:lottie_loop="false"
-        android:visibility="invisible"
         app:lottie_rawRes="@raw/animation" />
 
 
