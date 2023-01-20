@@ -22,3 +22,15 @@ Liste des fonctionnalités implémentées :
 [ ] Les taches en background (codage du démarrage d'un thread)  
 [x] Le codage d'un menu (contextuel ou non, utilisation d'un menu en resource XML)  
 [ ] L'application de pattern (Reactive programming, singleton, MVC,...) Liste :  
+
+# Screenshots
+Splash screen : 
+![LandingPage](https://user-images.githubusercontent.com/41628418/213702811-08c1421a-29cc-4689-b96d-86cd0de6ec2f.jpg)
+ 
+Home screen with animation when box is checked : 
+![Confetti](https://user-images.githubusercontent.com/41628418/213703388-f426f9ce-2db7-45d4-96ad-46d2d0d9e42c.jpg)
+
+Notes screen : 
+![Notes](https://user-images.githubusercontent.com/41628418/213703502-f8176e5f-eae2-4309-b511-be7b38a750c0.jpg)
+
+
